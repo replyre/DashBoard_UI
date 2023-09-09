@@ -1,0 +1,23 @@
+.side--top--block {
+  padding: 6.7px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.gradient1 {
+  background-image: linear-gradient(
+    to bottom left,
+    aliceblue,
+    rgb(162, 201, 236),
+    aliceblue
+  );
+}
+.gradient2 {
+  background-image: linear-gradient(
+    to bottom left,
+    rgb(230, 248, 242),
+    rgb(111, 236, 194),
+    rgb(230, 248, 242)
+  );
+}
