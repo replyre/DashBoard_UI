@@ -8,11 +8,15 @@ import About from "./pages/About";
 import Settings from "./pages/Settings";
 import Users from "./pages/Users";
 import Analytics from "./pages/Analytics";
+import PrimarySearchAppBar from "./components/Navbar";
+import AppStore from "./hooks/AppStore";
 
 function App() {
+  const navcolor = AppStore((state) => state.navcolor);
   return (
     <>
       <BrowserRouter>
+        <PrimarySearchAppBar navcolor={navcolor} />
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/Users" element={<Users />}></Route>

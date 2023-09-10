@@ -10,8 +10,6 @@ import CountUp from "react-countup";
 const About = () => {
   return (
     <>
-      <PrimarySearchAppBar />
-
       <Box
         sx={{
           display: "flex",

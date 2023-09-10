@@ -20,6 +20,7 @@ import { Link, useNavigate } from "react-router-dom";
 import AppStore, { useAppStore } from "../hooks/AppStore";
 import PeopleIcon from "@mui/icons-material/People";
 import InsertChartIcon from "@mui/icons-material/InsertChart";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 const drawerWidth = 240;
 
@@ -73,8 +74,7 @@ const Drawer = styled(MuiDrawer, {
 export default function MiniDrawer() {
   const navigate = useNavigate();
   const theme = useTheme();
-  // const [open, setOpen] = React.useState(true);
-  // const setOpen = useAppStore((state) => state.updateOpen);
+
   const open = AppStore((state) => state.dopen);
 
   return (
@@ -82,11 +82,6 @@ export default function MiniDrawer() {
       <CssBaseline />
 
       <Drawer variant="permanent" open={open}>
-        {/* <DrawerHeader>
-          <IconButton onClick={() => setOpen(!open)}>
-            {open ? <ChevronLeftIcon /> : <MenuIcon />}
-          </IconButton>
-        </DrawerHeader> */}
         <Divider />
 
         <List sx={{ pt: 10 }}>
@@ -128,9 +123,9 @@ export default function MiniDrawer() {
                   justifyContent: "center",
                 }}
               >
-                <PeopleIcon />
+                <ShoppingCartIcon />
               </ListItemIcon>
-              <ListItemText primary="Users" sx={{ opacity: open ? 1 : 0 }} />
+              <ListItemText primary="Products" sx={{ opacity: open ? 1 : 0 }} />
             </ListItemButton>
           </ListItem>
 

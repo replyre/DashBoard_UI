@@ -17,6 +17,7 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import AppStore, { useAppStore } from "../hooks/AppStore";
 
+// const navcolor = AppStore((state) => state.navcolor);
 const AppBar = styled(
   MuiAppBar,
   {}
@@ -63,11 +64,13 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export default function PrimarySearchAppBar() {
+export default function PrimarySearchAppBar({ navcolor }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
   const updateOpen = AppStore((state) => state.updateOpen);
+  //   const navcolor = AppStore((state) => state.navcolor);
   const isMenuOpen = Boolean(anchorEl);
+
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
   const handleProfileMenuOpen = (event) => {
@@ -167,7 +170,7 @@ export default function PrimarySearchAppBar() {
         position="fixed"
         sx={{
           color: "black",
-          backgroundColor: "white",
+          backgroundColor: navcolor,
         }}
       >
         <Toolbar>

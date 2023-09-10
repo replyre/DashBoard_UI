@@ -2,16 +2,27 @@ import React from "react";
 import MiniDrawer from "../components/Sidebar";
 import { Box, Typography } from "@mui/material";
 import PrimarySearchAppBar from "../components/Navbar";
-const About = () => {
+import StickyHeadTable from "./products/ProductList";
+const Users = () => {
   return (
     <>
-      <PrimarySearchAppBar />
-      <Box sx={{ display: "flex", p: 5 }}>
-        <MiniDrawer />
-        <h1>Users</h1>
-      </Box>
+      <div
+        style={{ minHeight: "100vh", backgroundColor: "rgb(229, 228, 226)" }}
+      >
+        <Box
+          sx={{
+            display: "flex",
+            pt: 15,
+            pl: 2,
+            pb: 2,
+          }}
+        >
+          <MiniDrawer />
+          <StickyHeadTable />
+        </Box>
+      </div>
     </>
   );
 };
 
-export default About;
+export default Users;

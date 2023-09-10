@@ -17,11 +17,11 @@ import "./Home.css";
 import BasicAccordion from "../components/accordian";
 import Bar from "../components/Charts/Bar";
 import CountUp from "react-countup";
+import AppStore from "../hooks/AppStore";
 const Home = () => {
+  const navcolor = AppStore((state) => state.navcolor);
   return (
     <>
-      <PrimarySearchAppBar />
-
       <Box sx={{ display: "flex", pt: 10, pl: 2, minHeight: "fit-content" }}>
         <MiniDrawer />
         <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
